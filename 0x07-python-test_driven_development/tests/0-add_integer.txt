@@ -1,0 +1,21 @@
+cat << EOF > tests/0-add_integer.txt
+#!/usr/bin/python3
+"""
+Unittests for the 0-add_integer module.
+"""
+import doctest
+import unittest
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
+
+class TestAddInteger(unittest.TestCase):
+    """
+    Test cases for the add_integer function.
+    """
+    def test_add_integer(self):
+        """
+        Test add_integer function with doctest.
+        """
+        self.assertEqual(doctest.testmod(models.square.Square)[0], 0)
+EOF
