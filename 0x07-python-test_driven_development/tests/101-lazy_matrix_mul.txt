@@ -1,0 +1,22 @@
+$ cat tests/101-lazy_matrix_mul.txt
+#!/usr/bin/python3
+"""Tests for lazy matrix multiplication using NumPy
+"""
+
+import unittest
+lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+class TestLazyMatrixMul(unittest.TestCase):
+    def test_lazy_matrix_mul(self):
+        m_a = [[1, 2], [3, 4]]
+        m_b = [[1, 2], [3, 4]]
+        result = lazy_matrix_mul(m_a, m_b)
+        self.assertTrue((result == [[7, 10], [15, 22]]).all())
+
+        m_a = [[1, 2]]
+        m_b = [[3, 4], [5, 6]]
+        result = lazy_matrix_mul(m_a, m_b)
+        self.assertTrue((result == [[13, 16]]).all())
+
+if __name__ == '__main__':
+    unittest.main()

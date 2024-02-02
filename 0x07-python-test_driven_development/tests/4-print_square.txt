@@ -1,0 +1,5 @@
+python3 -c 'from 4-print_square import print_square; print_square(4)'
+python3 -c 'from 4-print_square import print_square; print_square(10)'
+python3 -c 'from 4-print_square import print_square; print_square(0)'
+python3 -c 'from 4-print_square import print_square; print_square(1)'
+python3 -c 'from 4-print_square import print_square; print_square(-1)'
