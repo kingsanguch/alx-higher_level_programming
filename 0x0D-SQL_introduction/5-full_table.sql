@@ -1,0 +1,2 @@
+DESCRIBE first_table;
+
